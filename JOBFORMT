@@ -1,0 +1,11 @@
+//JOBFORMT  JOB (ACCT),'FORMAT VOL',CLASS=A,MSGCLASS=X
+//STEP01   EXEC PGM=IDCAMS
+//SYSPRINT DD SYSOUT=*
+//SYSIN    DD *
+    DEFINE CLUSTER -
+      (NAME(filesystem.name) -
+      VOLUME(volser) -
+      LINEAR) -
+    DATA -
+      (NAME(filesystem.name.DATA))
+/*
